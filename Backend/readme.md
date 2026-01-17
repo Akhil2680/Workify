@@ -69,7 +69,7 @@ dotenv must load before DB logic
 
 🟡 Phase 3A: Global Error Handling & 404
 
-Status: ⬜ Pending
+**Status:** ✅ Done
 
 Goal
 
