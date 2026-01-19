@@ -11,3 +11,4 @@ router.post('/login', loginUser);
 
 
 module.exports = router;
+console.log('Auth routes loaded');
