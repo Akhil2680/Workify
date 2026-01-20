@@ -19,7 +19,7 @@ async function verifyConnection() {
         process.exit(1);
     }
 }
-
+console.log('DB config loaded');
 verifyConnection();
 
 module.exports = pool;
