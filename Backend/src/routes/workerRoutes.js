@@ -1,10 +1,12 @@
 const express = require('express');
-const { createWorkerProfile } = require('../controllers/workerController');
-const { protect } = require('../middlewares/authMiddleware');
+console.log('🔥 workerRoutes file loaded');
 
 const router = express.Router();
 
-router.post('/profile', protect, createWorkerProfile);
+const { createWorkerProfile, getAllWorkers, getWorkerById } = require('../controllers/workerController');
+    const {protect}  = require('../middlewares/authMiddleware');
 
+router.post('/profile', protect, createWorkerProfile);
+router.get('/', getAllWorkers);
+router.get('/:id', getWorkerById);
 module.exports = router;
-console.log('Worker routes loaded');
