@@ -1,19 +1,16 @@
 const express = require('express');
 const app = express();
-app.use(express.json());
-
 const notFound = require('./middlewares/Notfound');
 const errorHandler = require('./middlewares/errorHandler');
-const authRoutes = require('./routes/authRoutes');
 const { protect } = require('./middlewares/authMiddleware');
+const authRoutes = require('./routes/authRoutes');
 const workerRoutes = require('./routes/workerRoutes');
 
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.send('welcome to Workify');
 });
-
-
 
 app.get('/api/protected', protect, (req, res) => {
     res.json({
@@ -22,9 +19,6 @@ app.get('/api/protected', protect, (req, res) => {
         user: req.user
     });
 });
-
-
-
 
 
 
