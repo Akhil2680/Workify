@@ -3,7 +3,7 @@ const pool = require('../config/db');
 // const errorHandler = require('../middlewares/errorHandler');
 const jwt = require('jsonwebtoken');
 
-
+// register user function
 const registerUser = async (req, res, next) => {
   try {
     // 1. Extract data from request body
