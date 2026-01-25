@@ -64,4 +64,55 @@ const createWorkerProfile = async (req, res, next) => {
   }
 };
 
-module.exports = { createWorkerProfile };
+// Additional controller functions for fetching workers
+
+const getAllWorkers = async (req, res, next) => {
+  try {
+    // fetch all workers (with optional filters)
+    const [workers] = await pool.execute(`
+     SELECT
+  workers.id,
+  users.name,
+  workers.service_type,
+  workers.experience_years,
+  workers.price_per_hour,
+  workers.availability,
+  workers.location
+FROM workers
+JOIN users ON workers.user_id = users.id;
+
+   `);
+    res.status(200).json({
+      success: true,
+      count: workers.length,
+      workers
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+const getWorkerById = async (req, res, next) => {
+  try {
+    // fetch single worker by id
+    const workerId = req.params.id;
+    const [workers] = await pool.execute(
+      'SELECT * FROM workers WHERE id = ?',
+      [workerId]
+    );
+    res.json(workers);
+  } catch (error) {
+    next(error);
+  }
+};
+
+module.exports = {
+  createWorkerProfile,
+  getAllWorkers,
+  getWorkerById
+};
+
+
+
+
+
