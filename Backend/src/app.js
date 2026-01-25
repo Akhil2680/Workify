@@ -1,13 +1,18 @@
 const express = require('express');
 const app = express();
+app.use(express.json());
+// middlewares
 const notFound = require('./middlewares/Notfound');
 const errorHandler = require('./middlewares/errorHandler');
 const { protect } = require('./middlewares/authMiddleware');
+
+// routes
 const authRoutes = require('./routes/authRoutes');
 const workerRoutes = require('./routes/workerRoutes');
+const bookingRoutes = require('./routes/bookingRoutes');
 
-app.use(express.json());
 
+// test route
 app.get('/', (req, res) => {
     res.send('welcome to Workify');
 });
@@ -21,9 +26,12 @@ app.get('/api/protected', protect, (req, res) => {
 });
 
 
-
+// use routes
 app.use('/api/auth', authRoutes);
 app.use('/api/workers', workerRoutes);
+app.use('/api/bookings', bookingRoutes);
+
+// not found + error handler
 app.use(notFound);
 app.use(errorHandler);
 

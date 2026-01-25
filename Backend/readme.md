@@ -123,7 +123,7 @@ Profile (protected)
 
 🟡 Phase 4: Worker Module
 
-Status: ⬜ Pending
+Status: ✅ Done
 
 Goal
 
@@ -141,7 +141,7 @@ Public worker listing APIs
 
 🟡 Phase 5: Booking System
 
-Status: ⬜ Pending
+Status: ✅ Done
 
 Goal
 
