@@ -159,7 +159,7 @@ Status updates
 
 🟡 Phase 6: Ratings & Reviews
 
-Status: ⬜ Pending
+Status: ⬜ On Track
 
 Goal
 
