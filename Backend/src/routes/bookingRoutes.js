@@ -7,8 +7,9 @@ const { bookWorker, getBookingsByUser, cancelBooking, acceptBooking, completeBoo
  
 
 router.post('/book/:workerId', protect, bookWorker);
-router.get('/my-bookings', protect, getBookingsByUser);
-router.post('/accept/:bookingId', protect, acceptBooking);
+
+router.patch('/:bookingId/accept', protect, acceptBooking);
+
 router.patch('/:bookingId/cancel', protect, cancelBooking);
 router.patch('/:bookingId/complete', protect, completeBooking);
 router.patch('/:bookingId/cancel-client', protect, cancelBookingByClient);
