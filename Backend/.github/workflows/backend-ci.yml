@@ -1,0 +1,40 @@
+name: Backend CI - Workify
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  backend-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1️⃣ Repo checkout
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2️⃣ Node.js setup
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      # 3️⃣ Install dependencies
+      - name: Install dependencies
+        run: |
+          cd Backend
+          npm install
+
+      # 4️⃣ Run tests (if available)
+      - name: Run tests
+        run: |
+          cd Backend
+          npm test --if-present
+
+      # 5️⃣ Build check (optional)
+      - name: Build project
+        run: |
+          cd Backend
+          npm run build --if-present

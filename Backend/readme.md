@@ -13,7 +13,7 @@ This README tracks the step-by-step backend implementation in phases.
 
 🟢 Phase 1: Server & App Setup
 
-Status: ✅ Done
+Status: ✅ it is Done 
 
 Goal
 
