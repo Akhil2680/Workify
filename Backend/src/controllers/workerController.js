@@ -9,7 +9,7 @@ const createWorkerProfile = async (req, res, next) => {
       'SELECT role FROM users WHERE id = ?',
       [userId]
     );
-
+ 
     if (userRows.length === 0) {
       res.status(404);
       throw new Error('User not found');

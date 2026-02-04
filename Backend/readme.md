@@ -13,7 +13,7 @@ This README tracks the step-by-step backend implementation in phases.
 
 🟢 Phase 1: Server & App Setup
 
-Status: ✅ Done
+Status: ✅ it is Done 
 
 Goal
 
@@ -159,7 +159,7 @@ Status updates
 
 🟡 Phase 6: Ratings & Reviews
 
-Status: ⬜ Pending
+Status: ⬜ On Track
 
 Goal
 
