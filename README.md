@@ -70,7 +70,7 @@ dotenv must load before DB logic
 
 🟡 Phase 3A: Global Error Handling & 404
 
-Status: ⬜ Pending
+Status: ✅ Done
 
 Goal
 
@@ -160,17 +160,17 @@ Status updates
 
 🟡 Phase 6: Ratings & Reviews
 
-Status: ⬜ Pending
+Status: ✅ Done
 
 Goal
 
 Trust & feedback system.
 
-Planned Implementation
+Implemented
 
-Ratings table
+Ratings/Reviews APIs
 
-Review submission
+Review submission for completed bookings
 
 Worker rating calculation
 
@@ -191,3 +191,16 @@ Production MySQL
 Server deployment
 
 Security hardening
+
+
+## Frontend (Vite + Tailwind) Structure
+
+A scalable frontend scaffold is now available in `frontend/` with organized folders for pages, reusable components, routes, services, context, hooks, and utilities.
+
+Quick start:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
