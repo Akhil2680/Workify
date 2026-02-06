@@ -175,6 +175,12 @@ One-review-per-booking protection
 
 Worker rating calculation (average + count) in worker APIs
 
+Database setup note
+
+Before using Phase 6 APIs, create the `reviews` table manually by running:
+
+`Backend/sql/phase6_reviews.sql`
+
 🟡 Phase 7: Deployment
 
 Status: ⬜ Pending

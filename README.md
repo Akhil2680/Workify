@@ -191,3 +191,16 @@ Production MySQL
 Server deployment
 
 Security hardening
+
+
+## Frontend (Vite + Tailwind) Structure
+
+A scalable frontend scaffold is now available in `frontend/` with organized folders for pages, reusable components, routes, services, context, hooks, and utilities.
+
+Quick start:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
