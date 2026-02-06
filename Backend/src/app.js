@@ -10,6 +10,7 @@ const { protect } = require('./middlewares/authMiddleware');
 const authRoutes = require('./routes/authRoutes');
 const workerRoutes = require('./routes/workerRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
+const reviewRoutes = require('./routes/reviewRoutes');
 
 
 // test route
@@ -30,6 +31,7 @@ app.get('/api/protected', protect, (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/workers', workerRoutes);
 app.use('/api/bookings', bookingRoutes);
+app.use('/api/reviews', reviewRoutes);
 
 // not found + error handler
 app.use(notFound);

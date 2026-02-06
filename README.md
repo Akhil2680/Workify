@@ -70,7 +70,7 @@ dotenv must load before DB logic
 
 🟡 Phase 3A: Global Error Handling & 404
 
-Status: ⬜ Pending
+Status: ✅ Done
 
 Goal
 
@@ -160,17 +160,17 @@ Status updates
 
 🟡 Phase 6: Ratings & Reviews
 
-Status: ⬜ Pending
+Status: ✅ Done
 
 Goal
 
 Trust & feedback system.
 
-Planned Implementation
+Implemented
 
-Ratings table
+Ratings/Reviews APIs
 
-Review submission
+Review submission for completed bookings
 
 Worker rating calculation
 

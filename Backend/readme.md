@@ -159,19 +159,21 @@ Status updates
 
 🟡 Phase 6: Ratings & Reviews
 
-Status: ⬜ On Track
+Status: ✅ Done
 
 Goal
 
 Trust & feedback system.
 
-Planned Implementation
+What was implemented
 
-Ratings table
+Review APIs (submit + worker review listing)
 
-Review submission
+Validation to allow review only after completed booking
 
-Worker rating calculation
+One-review-per-booking protection
+
+Worker rating calculation (average + count) in worker APIs
 
 🟡 Phase 7: Deployment
 
