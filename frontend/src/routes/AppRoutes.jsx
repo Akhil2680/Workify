@@ -3,6 +3,7 @@ import Home from '../pages/client/Home';
 import Workers from '../pages/client/Workers';
 import BookWorker from '../pages/client/BookWorker';
 import MyBookings from '../pages/client/MyBookings';
+import About from '../pages/client/About';
 import Login from '../pages/auth/Login';
 import Register from '../pages/auth/Register';
 import Dashboard from '../pages/worker/Dashboard';
@@ -14,6 +15,7 @@ const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/workers" element={<Workers />} />
+    <Route path="/about" element={<About />} />
     <Route path="/book/:id" element={<ProtectedRoute><BookWorker /></ProtectedRoute>} />
     <Route path="/my-bookings" element={<ProtectedRoute><MyBookings /></ProtectedRoute>} />
     <Route path="/worker/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
@@ -23,5 +25,6 @@ const AppRoutes = () => (
     <Route path="*" element={<NotFound />} />
   </Routes>
 );
+
 
 export default AppRoutes;
